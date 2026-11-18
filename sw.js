@@ -1,8 +1,8 @@
 // Offline (PRD R9): the whole app is stored when this worker installs (the build
 // writes the file list below), so it opens with no network after one visit.
 // Media the user picks never goes through here (it lives in IndexedDB as blobs).
-const CACHE = "ghost-sport-1795026619767"
-const ASSETS = ["./assets/analysis.worker-B15h0Jl8.js","./assets/index-C5bOU1dq.js","./assets/index-DzR9DB4i.css","./assets/smooth-bbJroGqd.js","./icon-192.png","./icon-512.png","./index.html","./manifest.webmanifest","./markers.sealed.json","./voice/1.wav","./voice/2.wav","./voice/3.wav","./voice/4.wav","./voice/5.wav","./voice/6.wav","./voice/7.wav","./voice/8.wav"]
+const CACHE = "ghost-sport-1795027498842"
+const ASSETS = ["./assets/analysis.worker-B15h0Jl8.js","./assets/index-BHyNejkX.js","./assets/index-C0XBJnuk.css","./assets/smooth-bbJroGqd.js","./icon-192.png","./icon-512.png","./index.html","./manifest.webmanifest","./markers.sealed.json","./voice/1.wav","./voice/2.wav","./voice/3.wav","./voice/4.wav","./voice/5.wav","./voice/6.wav","./voice/7.wav","./voice/8.wav"]
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', ...ASSETS])).then(() => self.skipWaiting()))
 })
